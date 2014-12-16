@@ -1,0 +1,28 @@
+/*	Jani Kähkönen/H9575
+Harjoitus_6	19.9.2014	*/
+
+#include <iostream>
+using namespace std;
+
+void osta(int raha,int hinta)
+{
+	if (hinta <= raha)
+	{
+		raha = raha - hinta;
+		cout << "Rahat riittivat, rahaa jaljella: " << raha << " Hinta oli: " << hinta << endl;
+	}
+	else
+	{
+		cout << "Rahat ei riita, rahaa jaljella: " << raha << " Hinta on: " << hinta << endl;
+	}
+}
+
+int main()
+{
+	int raha, hinta;
+
+	cout << "Paljon rahaa?\n"; cin >> raha;
+	cout << "Lihapiirakan hinta?\n"; cin >> hinta;
+
+	osta(raha,hinta);
+}
